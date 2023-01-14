@@ -1,0 +1,48 @@
+undraw_schedule_meeting_52nu 1/splash
+undraw_male_avatar_re_y880 1/login
+undraw_financial_data_re_p0fl 1/successfully
+
+//Circle image 
+
+import 'package:getwidget/getwidget.dart';
+
+ GFImageOverlay(
+   height: 200,
+   width: 200,
+   shape: BoxShape.circle,
+   image:AssetImage('your asset image'),
+   boxFit: BoxFit.cover,
+ )
+
+//pubspec.yaml
+
+name: my_awesome_application
+flutter:
+  uses-material-design: true
+
+Icon(
+      Icons.audiotrack,
+      color: Colors.green,
+      size: 30.0,
+    ),
+
+//make a text clickable
+
+child: RichText(
+          text: TextSpan(
+            text: 'Here is the ',
+            style: TextStyle(fontSize: 30, color: Colors.black),
+            children: <TextSpan>[
+              TextSpan(
+                  text: 'clickable ',
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      print('The button is clicked!');
+                    },
+                  style: TextStyle(
+                    color: Colors.blue,
+                  )),
+              TextSpan(text: 'text!'),
+            ],
+          ),
+        )));
